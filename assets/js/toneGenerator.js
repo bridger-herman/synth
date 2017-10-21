@@ -17,7 +17,7 @@ function ToneGenerator(note, velocity, context) {
     this.currentOsc = this.audioContext.createOscillator();
     this.currentOsc.connect(this.masterGainNode);
     this.currentOsc.frequency.value = frequencyFromNoteNumber(this.note);
-    this.currentOsc.type = "square";
+    this.currentOsc.type = "triangle";
     this.currentOsc.start();
   }
 
